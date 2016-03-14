@@ -18,10 +18,10 @@ S_RADIUS_T=$(echo "\u250C")
 
 # Colors and command prompts for root and regular user
 if [[ $UID = 0 ]]; then
-  _USER="%{$fg[red]%}%n%{$reset_color%}"
+  _USER="%{$fg_bold[red]%}%n%{$reset_color%}"
   _SIGN="%{$fg_bold[red]%}#%{$reset_color%}"
 else
-  _USER="%{$fg[green]%}%n%{$reset_color%}"
+  _USER="%{$fg_bold[green]%}%n%{$reset_color%}"
   _SIGN="%{$fg_bold[green]%}$%{$reset_color%}"
 fi
 
