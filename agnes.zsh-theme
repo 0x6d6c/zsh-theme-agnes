@@ -18,11 +18,12 @@ S_RADIUS_T=$(echo "\u250C")
 
 # Colors and command prompts for root and regular user
 if [[ $UID = 0 ]]; then
-  _COMMAND_PROMPT="%{$fg_bold[red]%}#"
+  _USER="%{$fg[red]%}%n%{$reset_color%}"
+  _SIGN="%{$fg_bold[red]%}#%{$reset_color%}"
 else
-  _COMMAND_PROMPT="%{$fg_bold[green]%}$"
+  _USER="%{$fg[green]%}%n%{$reset_color%}"
+  _SIGN="%{$fg_bold[green]%}$%{$reset_color%}"
 fi
-_COMMAND_PROMPT="$_COMMAND_PROMPT%{$reset_color%} "
 
 # History event number
 _HISTORY="$(echo $S_HISTORY)%h"
@@ -50,15 +51,13 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[red]%}*%{$reset_color%}"
 
 # Prompt format: \n MACHINE: DIRECTORY BRANCH STATE \n USER $
 PROMPT="
-${S_RADIUS_T}%M: \
+${S_RADIUS_T}$_USER@%M: \
 %{$fg_bold[blue]%}${cwd}%{$reset_color%} \
 ${git_info} \
 ${git_status}
-${S_RADIUS_B}%n \
-$_COMMAND_PROMPT"
-
+${S_RADIUS_B}$_SIGN "
 
 # RPROMPT format: ExitCode HistoryEventNumber [TIME]
 RPROMPT="%{$fg[yellow]%}%?%{$reset_color%} \
 $_HISTORY \
-[%*]"
+%{$fg_bold[black]%}[%*]%{$reset_color%}"
