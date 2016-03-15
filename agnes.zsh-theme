@@ -30,7 +30,7 @@ _HISTORY="$(echo $S_HISTORY)%h"
 
 # Partial prompts
 PROMPT_PREFIX1="${S_BRANCH} "
-PROMPT_PREFIX2="%{$fg[cyan]%}"
+PROMPT_PREFIX2="%{$fg_bold[yellow]%}"
 PROMPT_SUFFIX="%{$reset_color%}"
 PROMPT_CLEAN=" %{$fg[green]%}${S_TICK}"
 PROMPT_DIRTY=" %{$fg[red]%}${S_CROSS}"
