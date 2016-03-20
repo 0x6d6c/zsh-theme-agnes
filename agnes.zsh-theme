@@ -2,6 +2,7 @@
 
 # Variables
 local cwd='${PWD/#$HOME/~}'
+local exit_code='%(?,%?,%{$fg_bold[red]%}%?%{$reset_color%})'
 
 # Symbols
 S_ARROW_D='\u25BC'
@@ -58,6 +59,6 @@ ${git_status}
 ${S_RADIUS_B}$_SIGN "
 
 # RPROMPT format: ExitCode HistoryEventNumber [TIME]
-RPROMPT="%{$fg[yellow]%}%?%{$reset_color%} \
+RPROMPT="$exit_code \
 $_HISTORY \
 %{$fg_bold[black]%}[%*]%{$reset_color%}"
