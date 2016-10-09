@@ -10,7 +10,6 @@ S_ARROW_U='\u25B2'
 S_BRANCH='\ue0a0'
 S_CIRCLE='\u25CF'
 S_CROSS='\u2716 '
-S_HISTORY='\u231B'
 S_STAR='\u2731 '
 S_TAG='\u2691'
 S_TICK='\u2714'
@@ -25,9 +24,6 @@ else
   _USER="%{$fg_bold[green]%}%n%{$reset_color%}"
   _SIGN="%{$fg_bold[green]%}$%{$reset_color%}"
 fi
-
-# History event number
-_HISTORY="$(echo $S_HISTORY)%h"
 
 # Partial prompts
 PROMPT_PREFIX1="${S_BRANCH} "
@@ -59,6 +55,6 @@ ${git_status}
 ${S_RADIUS_B}$_SIGN "
 
 # RPROMPT format: ExitCode HistoryEventNumber [TIME]
-RPROMPT="$exit_code \
-$_HISTORY \
-%{$fg_bold[black]%}[%*]%{$reset_color%}"
+RPROMPT="$exit_code | \
+%h | \
+%*"
