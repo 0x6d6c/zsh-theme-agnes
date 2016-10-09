@@ -55,6 +55,6 @@ ${git_status}
 ${S_RADIUS_B}$_SIGN "
 
 # RPROMPT format: ExitCode HistoryEventNumber [TIME]
-RPROMPT="$exit_code | \
-%h | \
+RPROMPT="$exit_code \
+%h \
 %*"
