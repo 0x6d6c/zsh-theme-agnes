@@ -56,5 +56,5 @@ ${S_RADIUS_B}$_SIGN "
 
 # RPROMPT format: ExitCode HistoryEventNumber DateTime
 RPROMPT="$exit_code \
-%h \
+!%h \
 %*"
