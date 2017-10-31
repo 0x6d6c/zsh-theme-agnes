@@ -2,7 +2,7 @@
 
 # Variables
 local cwd='${PWD/#$HOME/~}'
-local exit_code='%(?,%?,%{$fg_bold[red]%}%?%{$reset_color%})'
+local exit_code='%(?.%?.%{$bg_bold[red]%}%?%{$reset_color%})'
 
 # Symbols
 S_ARROW_D='\u25BC'
