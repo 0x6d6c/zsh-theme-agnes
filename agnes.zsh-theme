@@ -3,6 +3,7 @@
 # Variables
 local cwd='${PWD/#$HOME/~}'
 local exit_code='%(?.%?.%{$bg_bold[red]%}%?%{$reset_color%})'
+local background_jobs='%(1j.%{$fg_bold[green]%}%j%{$reset_color%}.%j)'
 
 # Symbols
 S_ARROW_D='\u25BC'
@@ -49,13 +50,13 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[red]%}*%{$reset_color%}"
 # Prompt format: \n MACHINE: DIRECTORY BRANCH STATE \n USER $
 PROMPT="
 ${S_RADIUS_T}$_USER@%M: \
-%{$fg_bold[green]%}${cwd}%{$reset_color%} \
+%B${cwd}%b \
 ${git_info} \
 ${git_status}
 ${S_RADIUS_B}$_SIGN "
 
 # RPROMPT format: ExitCode BackgroundJobsCount HistoryEventNumber Time
 RPROMPT="$exit_code \
-%j \
+$background_jobs \
 !%h \
 %*"
