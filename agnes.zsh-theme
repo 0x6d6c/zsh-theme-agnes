@@ -37,6 +37,8 @@ PROMPT_DIRTY=" %{$fg[red]%}${S_CROSS}"
 # Git info
 local git_info='$(git_prompt_info)'
 local git_status='$(git_prompt_status)'
+local git_behind='$(git_commits_behind)'
+local git_ahead='$(git_commits_ahead)'
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[magenta]%}${S_ARROW_U}%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[magenta]%}${S_ARROW_D}%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[blue]%}+%{$reset_color%}"
@@ -51,8 +53,10 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[red]%}*%{$reset_color%}"
 # Prompt format: \n User@Host: CWD Branch GitStatus \n PROMPT
 PROMPT="
 ${S_RADIUS_T}$_USER@$host_full: \
-%B${cwd}%b \
+%B${cwd}%b\
 ${git_info} \
+${git_behind}\
+${git_ahead}\
 ${git_status}
 ${S_RADIUS_B}$_SIGN "
 
