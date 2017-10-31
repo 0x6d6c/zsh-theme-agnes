@@ -40,15 +40,14 @@ local git_status='$(git_prompt_status)'
 local git_behind='$(git_commits_behind)'
 local git_ahead='$(git_commits_ahead)'
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[magenta]%}${S_ARROW_U}%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}${S_CIRCLE}%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[magenta]%}${S_ARROW_D}%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[blue]%}+%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="${PROMPT_CLEAN}"
 ZSH_THEME_GIT_PROMPT_DIRTY="${PROMPT_DIRTY}"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%}+%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_PREFIX=" ${PROMPT_PREFIX1}${PROMPT_PREFIX2}"
-ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[green]%}O%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="${PROMPT_SUFFIX}"
-ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$fg[yellow]%}O%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[red]%}*%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[red]%}${S_STAR}%{$reset_color%}"
 
 # Prompt format: \n User@Host: CWD Branch GitStatus \n PROMPT
 PROMPT="
