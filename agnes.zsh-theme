@@ -49,7 +49,7 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[red]%}*%{$reset_color%}"
 # Prompt format: \n MACHINE: DIRECTORY BRANCH STATE \n USER $
 PROMPT="
 ${S_RADIUS_T}$_USER@%M: \
-%{$fg_bold[blue]%}${cwd}%{$reset_color%} \
+%{$fg_bold[green]%}${cwd}%{$reset_color%} \
 ${git_info} \
 ${git_status}
 ${S_RADIUS_B}$_SIGN "
