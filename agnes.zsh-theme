@@ -4,6 +4,7 @@
 local cwd='${PWD/#$HOME/~}'
 local exit_code='%(?.%?.%{$bg_bold[red]%}%?%{$reset_color%})'
 local background_jobs='%(1j.%{$fg_bold[green]%}%j%{$reset_color%}.%j)'
+local host_full='$(hostname --long)'
 
 # Symbols
 S_ARROW_D='\u25BC'
@@ -47,9 +48,9 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="${PROMPT_SUFFIX}"
 ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$fg[yellow]%}O%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[red]%}*%{$reset_color%}"
 
-# Prompt format: \n USER@MACHINE: CWD BRANCH STATE \n PROMPT
+# Prompt format: \n User@Host: CWD Branch GitStatus \n PROMPT
 PROMPT="
-${S_RADIUS_T}$_USER@%M: \
+${S_RADIUS_T}$_USER@$host_full: \
 %B${cwd}%b \
 ${git_info} \
 ${git_status}
