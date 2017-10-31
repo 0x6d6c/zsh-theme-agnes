@@ -47,7 +47,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="${PROMPT_SUFFIX}"
 ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$fg[yellow]%}O%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[red]%}*%{$reset_color%}"
 
-# Prompt format: \n MACHINE: DIRECTORY BRANCH STATE \n USER $
+# Prompt format: \n USER@MACHINE: CWD BRANCH STATE \n PROMPT
 PROMPT="
 ${S_RADIUS_T}$_USER@%M: \
 %B${cwd}%b \
