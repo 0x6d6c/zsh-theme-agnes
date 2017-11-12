@@ -11,10 +11,10 @@ S_ARROW_D='\u25BC'
 S_ARROW_U='\u25B2'
 S_BRANCH='\ue0a0'
 S_CIRCLE='\u25CF'
-S_CROSS='\u2716 '
+S_CROSS='\u2718'
 S_STAR='\u2731 '
 S_TAG='\u2691'
-S_TICK='\u2714'
+S_TICK='\u2713'
 S_RADIUS_B=$(echo "\u2514")
 S_RADIUS_T=$(echo "\u250C")
 
